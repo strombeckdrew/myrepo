@@ -1,0 +1,18 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: msg
+    type: string
+    nullable: true
+    metadata:
+      description: Text message or content associated with the record.
+      mappings: []
+      tags: []
+  - name: col_a
+    type: integer
+    nullable: true
+    metadata:
+      description: Unique identifier or reference number for the record.
+      mappings: []
+      tags: []

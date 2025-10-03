@@ -1,0 +1,182 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.12.3",
+        "pyPiVersion" : "2.1.4"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/test_db_pipeline_100325",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "test_db_pipeline_100325",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "34091",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "prophecydocs1.testdb100325.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "test_db_pipeline_100325",
+    "configTopLevelPackage" : "test_db_pipeline_100325",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "8xPu2HYlUvM7mad-tTIP7$$XFQl5ownr0vcN71YE9TGU",
+    "source" : "l3clRT0VvVbLkOBesx8Ed$$96SVfgTjCPr9MHkmDeflf",
+    "sourcePort" : "0mGIEb_aRXk2OU8BXyovc$$SoLkJV0T7sEHQmzkWT4Fa",
+    "target" : "Q23308O2xT2sZHtwWAW4U$$QIGU4f_dcAcFFfhAHam1Z",
+    "targetPort" : "sI93zIbI-2orlD2YL7y9t$$3k4cxX-juy8QegC3PBSWv"
+  } ],
+  "processes" : {
+    "l3clRT0VvVbLkOBesx8Ed$$96SVfgTjCPr9MHkmDeflf" : {
+      "id" : "l3clRT0VvVbLkOBesx8Ed$$96SVfgTjCPr9MHkmDeflf",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "test_dataset_100325",
+        "slug" : "test_dataset_100325",
+        "x" : -580,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0mGIEb_aRXk2OU8BXyovc$$SoLkJV0T7sEHQmzkWT4Fa",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/test_dataset_100325"
+      }
+    },
+    "Q23308O2xT2sZHtwWAW4U$$QIGU4f_dcAcFFfhAHam1Z" : {
+      "id" : "Q23308O2xT2sZHtwWAW4U$$QIGU4f_dcAcFFfhAHam1Z",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "test_target_100325",
+        "slug" : "test_target_100325",
+        "x" : -420,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "sI93zIbI-2orlD2YL7y9t$$3k4cxX-juy8QegC3PBSWv",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "msg",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Text message or content associated with the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "col_a",
+              "type" : "integer",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier or reference number for the record.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/test_target_100325"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  }
+}
